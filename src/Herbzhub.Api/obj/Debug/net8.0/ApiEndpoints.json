@@ -1,0 +1,280 @@
+[
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.AuthenticationController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Authentication/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Herbzhub.Models.Request.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/Authentication/user-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Herbzhub.Models.Request.AuthenticationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.CountiesController",
+    "Method": "GetCountries",
+    "RelativePath": "api/Counties/get-counties",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.CountiesController",
+    "Method": "GetManufacturer",
+    "RelativePath": "api/Counties/get-manufacturer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.CountiesController",
+    "Method": "GetStates",
+    "RelativePath": "api/Counties/get-states",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Herbzhub.Api.Controllers.ManufacturerController",
+    "Method": "ManufacturerOnboarding",
+    "RelativePath": "api/Manufacturer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CountiesId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SerialNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequest.streetAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequest.usersCity",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequest.usersState",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequest.userZipCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressRequest.countiesId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdCards.File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "licenses.FederalLicense",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "licenses.StateLicense",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "licenses.ExpiringDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "licenses.UploadLicense",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.BusinessName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.BusinessType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.OwnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.OwnerContact",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.NumberOfEmployees",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.BusinessRegistrationNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessDetails.AnnualRevenue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OperatingHours",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessAddress",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessCity",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessState",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessCountry",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessPostalCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessPhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.BusinessEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.WebsiteUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLocation.SocialMedialUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BankDetails.TaxId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BankDetails.BankAccount",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BankDetails.BankName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

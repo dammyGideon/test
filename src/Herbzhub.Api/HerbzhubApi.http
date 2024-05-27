@@ -1,0 +1,11 @@
+@Herbzhub.Api_HostAddress = http://localhost:5157
+
+POST {{Herbzhub.Api_HostAddress}}/api/Counties/
+Accept: applcation/json
+
+###
+
+GET {{Herbzhub.Api_HostAddress}}/api/Counties/get-counties
+Accept: application/json
+
+###

@@ -1,0 +1,69 @@
+version: '3.4'
+
+services:
+  herbzhub.api:
+    container_name: herbzhub_backend_api
+    image: ${DOCKER_REGISTRY-}herbzhubapi
+    build:
+      context: .
+      target: development
+      dockerfile: Herbzhub.Api/Dockerfile
+    volumes:
+       - /Herbzhub.Api:/app
+       - /Herbzhub.Api/appsettings.Development.json:/app/appsettings.json
+    ports:
+       - "8180:80"
+    networks:
+        - backend
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: development
+      ConnectionStrings__DefaultConnection: Server=postgresql;Database=HerbzHub;User Id=HerbzHub;Password=password
+ 
+    depends_on:
+       - postgresql
+       
+
+  init-db:
+    build:
+     context: /HerbzHub.Api
+     target: init-db
+     dockerfile: Dockerfile
+    volumes:
+      - ./src/Backend.Api:/app
+      - ./src/Backend.Api/appsettings.Development.json:/app/appsettings.json
+    command: dotnet ef database update
+
+    networks:
+      - backend
+    depends_on:
+      postgres:
+        condition: service_started
+
+
+  pgadmin4:
+    image: dpage/pgadmin4
+    ports:
+      - "84:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: christian@dekamco.com
+      PGADMIN_DEFAULT_PASSWORD: hh24nano!@#
+    depends_on:
+      - postgresql
+
+  postgresql:
+    image: postgres
+    container_name: herbzhub_backend
+    restart: always
+    environment:
+      POSTGRES_DB: HerbzHub
+      POSTGRES_USER: HerbzHub
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5439:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
